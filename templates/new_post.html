@@ -1,13 +1,26 @@
-<div class="modal-content">
-    <span class="close" onclick="closeModal()">×</span>
-    <h2>Create New Post</h2>
-    <div class="file-upload" onclick="triggerFileUpload()">
-        <span class="material-icons">add_photo_alternate</span>
-        <p>Drag photos and videos here</p>
-        <button onclick="triggerFileUpload()">Select from computer</button>
-        <input type="file" id="file-input" style="display: none;" onchange="previewImage(event)">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Post</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/post.css">
+</head>
+<body>
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">×</span>
+            <h2>Create New Post</h2>
+            <div class="upload-container" onclick="triggerFileUpload()">
+                <span class="material-icons">add_photo_alternate</span>
+                <p>Drag photos and videos here</p>
+                <button>Select from computer</button>
+                <input type="file" id="file-input" style="display:none">
+            </div>
+            <button class="next-btn" onclick="goToNextStage()">Next</button>
+        </div>
     </div>
-    <div id="image-preview" class="image-preview"></div>
-    <button onclick="nextStep()">Next</button>
-</div>
-
+    <script src="/static/js/post.js"></script>
+</body>
+</html>
