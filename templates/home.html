@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rafiki Connect - Home Feed</title>
-    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/post.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <!-- Top Bar -->
     <div class="top-bar">
         <span class="logo">Rafiki Connect</span>
@@ -44,8 +44,12 @@
 
             <div class="comments-section">
                 <h4>Comments</h4>
-                <div class="comment"><p><strong>Jane Doe</strong>: Great post! Really enjoyed this.</p></div>
-                <div class="comment"><p><strong>John Smith</strong>: Awesome photo! Thanks for sharing.</p></div>
+                <div class="comment">
+                    <p><strong>Jane Doe</strong>: Great post! Really enjoyed this.</p>
+                </div>
+                <div class="comment">
+                    <p><strong>John Smith</strong>: Awesome photo! Thanks for sharing.</p>
+                </div>
                 <form class="add-comment-form" onsubmit="addComment(event)">
                     <input type="text" id="comment-input" placeholder="Add a comment..." required>
                     <button type="submit">Post</button>
@@ -61,15 +65,9 @@
         <a href="/local-connections" class="material-icons">location_on</a>
         <a href="/favorites" class="material-icons">favorite</a>
         <a href="/profile" class="material-icons">person</a>
-        <a href="#" class="material-icons" id="create-post">add_circle</a>
+        <a href="/new-post" class="material-icons" id="create-post">add_circle</a>
     </div>
 
-    <!-- New Post Modal -->
-    <div id="new-post-modal" class="modal">
-        {% include "new_post.html" %}
-    </div>
-
-    <script src="/static/post.js"></script>
+    <script src="/static/js/main.js"></script>
 </body>
 </html>
-
